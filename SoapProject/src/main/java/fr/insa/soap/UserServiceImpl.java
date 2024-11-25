@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
              PreparedStatement ps = conn.prepareStatement("SELECT id, username, email FROM users");
              ResultSet rs = ps.executeQuery()) {
 
-            while (rs.next()) {
+            while (rs.next()) {po
                 users.add(new User(rs.getInt("id"), rs.getString("username"), rs.getString("email")));
             }
         } catch (Exception e) {
