@@ -1,0 +1,14 @@
+package fr.insa.soap;
+
+@WebService
+public interface UserServices {
+
+    @WebMethod
+    List<User> getUsers();
+
+    @WebMethod
+    User getUserById(int id);
+    
+    @WebMethod
+    String addUser(String username, String email);  // New method to add a user
+}
